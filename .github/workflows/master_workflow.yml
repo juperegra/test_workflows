@@ -12,4 +12,4 @@ jobs:
     test:
         uses: ./.github/workflows/test.yml
         with:
-            enviroment: ${{env.DAY_OF_WEEK}}
+            enviroment: $DAY_OF_WEEK
