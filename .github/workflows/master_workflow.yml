@@ -5,12 +5,11 @@ on:
         branches:
             - main
 
-            
 env:
-    enviroment: test
+  DAY_OF_WEEK: Monday
 
 jobs:
     test:
         uses: ./.github/workflows/test.yml
         with:
-            enviroment: ${{github.env.enviroment}}
+            enviroment: ${{env.DAY_OF_WEEK}}
