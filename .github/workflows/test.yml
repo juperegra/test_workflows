@@ -9,10 +9,18 @@ on:
                 default: aaa
 
 jobs:
-    test_job:
+    test_job_0:
         name: test
         runs-on: ubuntu-latest
         steps:
             - name: test_test
               run:
-                echo ${{inputs.enviroment}}
+                echo funciona no merge
+    test_job:
+        if: ${{github.event.pull_request.state=='closed' && github.event.pull_request.merged==true}}
+        name: test
+        runs-on: ubuntu-latest
+        steps:
+            - name: test_test
+              run:
+                echo funciona merge
