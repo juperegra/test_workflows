@@ -1,0 +1,17 @@
+name: test
+run-name: deployment at ${{ github.event.pull_request.created_at }} by @${{ github.actor }}
+
+
+env:
+    DAY_OF_WEEK: Monday
+
+on:
+    pull_request:
+        types: [opened,closed]
+
+
+jobs:
+    test:
+        uses: ./.github/workflows/test.yml
+        with:
+            enviroment: ${{github.DAY_OF_WEEK}}
