@@ -1,4 +1,5 @@
-name: deployment at ${{ github.event.repository.updated_at}} by @${{ github.actor }}
+name: test
+run-name: deployment at ${{ github.event.repository.updated_at}} by @${{ github.actor }}
 
 
 env:
