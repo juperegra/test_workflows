@@ -1,5 +1,5 @@
 name: test
-run-name: deployment at ${{ github.event.repository.updated_at}} by @${{ github.actor }}
+run-name: deployment at ${{ github.event.pull_request.created_at }} by @${{ github.actor }}
 
 
 env:
